@@ -4,7 +4,7 @@
 # 2023-02-17
 
 # Read in data
-all_gapminder <- read.csv(file = "./data/gapminder-FiveYearData.csv",
+all_gapminder <- read.csv(file = "day-1/data/gapminder-FiveYearData.csv",
                           stringsAsFactors = TRUE)
 
 # Hold off on subsetting the data
@@ -33,7 +33,7 @@ for (curr_year in years) {
   gapminder_one_year <- all_gapminder[all_gapminder$year == curr_year, ]
   
   # Open PDF device
-  filename <- paste0("output/Life_exp_", curr_year, "_graph.pdf")
+  filename <- paste0("day-1/output/Life_exp_", curr_year, "_graph.pdf")
   pdf(file = filename, useDingbats = FALSE)
   # Create main plot
   plot(x = gapminder_one_year$Log10GDP, 
@@ -59,5 +59,4 @@ for (curr_year in years) {
   
   # Close PDF device
   dev.off()
-}
 
