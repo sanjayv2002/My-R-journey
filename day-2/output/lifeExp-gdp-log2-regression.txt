@@ -1,0 +1,20 @@
+
+Call:
+lm(formula = lifeExp ~ LogGDP, data = gapminder2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18.7709  -2.8743   0.4812   3.6039  14.6986 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -0.6505     3.3463  -0.194    0.846    
+LogGDP        5.1942     0.2766  18.780   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 5.762 on 140 degrees of freedom
+Multiple R-squared:  0.7158,	Adjusted R-squared:  0.7138 
+F-statistic: 352.7 on 1 and 140 DF,  p-value: < 2.2e-16
+
