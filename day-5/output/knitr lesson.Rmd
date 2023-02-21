@@ -1,0 +1,23 @@
+---
+title: "knitr lesson"
+author: "Sanjay Kumar V"
+date: "2023-02-21"
+output: html_document
+---
+
+# Introduction to knitr
+
+This is my first knitr document
+
+Bulleted lists
+
++ Regular font
++ **bold font**
++ _italic font_
+
+Numbered lists
+
+1. one
+2. two
+3. three
+

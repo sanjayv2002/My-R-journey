@@ -1,0 +1,30 @@
+---
+title: "Iris shape analyses"
+author: "Sanjay Kumar V"
+date: "2023-02-21"
+output: html_document
+---
+
+## Introduction
+In this report we test for a relationship between different parts of morphology in _Iris_ flowers
+
+
+## Materials $ methods
+Analyses are based on data for three _Iris_ species from the work of [R.A. Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher). We used linear regression to test for relationships.
+
+## Results
+
+```{r}
+plot(x = iris$Petal.Length,
+     y = iris$Petal.Width,
+     xlab = "Petal length (cm)",
+     ylab = "Petal width (cm)")
+```
+
+```{r echo = FALSE}
+    iris.model <- lm(Petal.Width ~ Petal.Length, data = iris)
+    iris.model.summary <- summary(iris.model)
+    r.squared <- iris.model.summary$r.squared
+```
+    
+    Petal width and petal length were highly correlated (r^2^ = `r round(r.squared, 2)`).
